@@ -1,50 +1,38 @@
-# CA Studio
+# LighthePod
 
-Static marketing site for CA Studio, a US-facing podcast post-production studio.
+Static producer site for **LighthePod** — Clyde A., podcast producer and digital media engineer.
 
-**Intended host:** GitHub Pages. Currently published at https://lightants.github.io/ca-studio/. Relative links, no build step. After you attach a custom domain, add it in the Pages settings; this repo does not invent a live URL.
+**Pages:** https://lightants.github.io/lighthepod/
+
+**Hire:** [upwork.com/freelancers/clydeantes](https://www.upwork.com/freelancers/clydeantes) · **$20/hr**
+
+Public name is **LighthePod** (one word, capital L and P). Do not present this as Relay Studio or CA Studio. The reel at [vimeo.com/castudios](https://vimeo.com/castudios) may be cited as CA Studios.
 
 ## Local preview
 
 ```bash
-cd ca-studio
+cd lighthepod
 python3 -m http.server 8080
 ```
 
-Open `http://localhost:8080`.
+Open `http://localhost:8080`. Relative links, no build step.
 
-## Brand
+## Facts
 
-Public name: **CA Studio** (singular Studio). Header wordmark is `CA` + `Studio`. Tagline: Record today. Ready by morning.
+Stats, job titles, the public hourly, employment, education, insights, and testimonials are taken from Clyde A.’s **live Upwork profile** (retrieved 2026-08-29). Quotes are reproduced exactly. Do not invent clients, logos, awards, or extra testimonials.
 
-Do not add a phone, Instagram, or inbox until a real one exists. The start form does not send email.
+Named credits from the Vimeo reel (do not invent more): Shangri-La Plaza; Korean Cultural Center in the Philippines; Digital Participation Camp (Germany); JENESYS 2.0 (Japan).
 
-## Where prices live
+Do not invent a contact email. There is no phone or social listed here until a real one exists.
 
-Keep these three places in lockstep. Do not invent extras.
+## Intake
 
-1. **Source of truth for visitors:** `pricing.html` (packages, retainers, add-ons).
-2. **Home teasers:** `index.html` package cards and the retainer one-liner under them.
-3. **Intake dropdown:** `start.html` `<select id="package">` plus labels in `app.js` (`packageLabel`).
+`start.html` + `app.js`. Client-side only. Submissions are stored in `localStorage` under `lighthePod.intakeRequests`. Upwork is the primary hire path.
 
-Exact figures:
+## Design
 
-- Cut $149 / Show $249 / Stage $399 per episode
-- Retainers (4 episodes / month): Cut $529 · Show $899 · Stage $1,449
-- Add-ons: extra 30 min raw +$45 · extra speaker/camera +$79 · extra clip +$25 · 48-hour rush +40% · YouTube upload +$29
-
-The one market sentence on `pricing.html` is allowed. Do not add competitor names or extra stats.
-
-## Intake form
-
-`start.html` + `app.js`. Client-side only. Submissions are stored in `localStorage` under `caStudio.intakeRequests`. Success copy: reply within one business day.
-
-To wire email later: read that key, POST the JSON to a form backend, and keep the in-page success state. Do not put a placeholder inbox on the site.
-
-## Design notes
-
-Warm late-night booth: walnut, brass gold, cream type. Fraunces + Figtree via Google Fonts. Original SVGs in `assets/` and `favicon.svg`. No stock photography.
+Late-night edit bay with analog light leak: deep ink, coral, a magenta wash. Bold Bricolage Grotesque wordmark, Instrument Sans UI. Original SVGs in `assets/` and `favicon.svg`. No stock photography, no fake headshot.
 
 ## Previews
 
-Desktop and mobile captures of home and pricing live in `previews/` when generated.
+Desktop and mobile captures of home live in `previews/` when generated.

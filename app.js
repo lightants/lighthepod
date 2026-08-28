@@ -1,8 +1,7 @@
 (function () {
   "use strict";
 
-  var STORAGE_KEY = "caStudio.intakeRequests";
-  var LEGACY_STORAGE_KEY = "relayStudio.intakeRequests";
+  var STORAGE_KEY = "lighthePod.intakeRequests";
 
   var toggle = document.querySelector("[data-nav-toggle]");
   var nav = document.getElementById("site-nav");
@@ -10,11 +9,13 @@
     toggle.addEventListener("click", function () {
       var open = document.body.classList.toggle("nav-open");
       toggle.setAttribute("aria-expanded", open ? "true" : "false");
+      toggle.setAttribute("aria-label", open ? "Close menu" : "Open menu");
     });
     nav.querySelectorAll("a").forEach(function (link) {
       link.addEventListener("click", function () {
         document.body.classList.remove("nav-open");
         toggle.setAttribute("aria-expanded", "false");
+        toggle.setAttribute("aria-label", "Open menu");
       });
     });
   }
@@ -43,13 +44,6 @@
   function loadAll() {
     try {
       var raw = localStorage.getItem(STORAGE_KEY);
-      if (!raw) {
-        raw = localStorage.getItem(LEGACY_STORAGE_KEY);
-        if (raw) {
-          localStorage.setItem(STORAGE_KEY, raw);
-          localStorage.removeItem(LEGACY_STORAGE_KEY);
-        }
-      }
       var parsed = raw ? JSON.parse(raw) : [];
       return Array.isArray(parsed) ? parsed : [];
     } catch (e) {
@@ -63,32 +57,31 @@
     localStorage.setItem(STORAGE_KEY, JSON.stringify(all));
   }
 
-  function packageLabel(v) {
-    if (v === "cut") return "Cut — $149 / episode";
-    if (v === "show") return "Show — $249 / episode";
-    if (v === "stage") return "Stage — $399 / episode";
-    if (v === "cut-retainer") return "Cut retainer — $529 / month";
-    if (v === "show-retainer") return "Show retainer — $899 / month";
-    if (v === "stage-retainer") return "Stage retainer — $1,449 / month";
+  function serviceLabel(v) {
+    if (v === "podcast-editing") return "Podcast Editing";
+    if (v === "video-editing") return "Video Editing";
+    if (v === "audio-enhancement") return "Audio Enhancement";
+    if (v === "shorts-clips") return "Shorts/Clips";
+    if (v === "publishing") return "Publishing";
     return v;
   }
 
   function formatSummary(entry) {
     return [
-      "CA Studio — episode request",
+      "LighthePod — brief",
       "Reference: " + entry.id,
       "When: " + entry.createdAt,
       "",
-      "Show: " + entry.showName,
+      "Show / project: " + entry.showName,
+      "Service: " + serviceLabel(entry.service),
       "Format: " + entry.format,
-      "Length: " + entry.length,
-      "Cadence: " + entry.cadence,
-      "Package: " + packageLabel(entry.package),
       "Name: " + entry.name,
       "Email: " + entry.email,
       "",
       "Link / notes:",
-      entry.notes || "(none)"
+      entry.notes || "(none)",
+      "",
+      "Hire path: https://www.upwork.com/freelancers/clydeantes ($20/hr)"
     ].join("\n");
   }
 
@@ -97,24 +90,22 @@
     if (errorEl) errorEl.textContent = "";
 
     var entry = {
-      id: "CA-" + Date.now().toString(36).toUpperCase(),
+      id: "LP-" + Date.now().toString(36).toUpperCase(),
       createdAt: new Date().toISOString(),
       showName: val("show-name"),
+      service: val("service"),
       format: val("format"),
-      length: val("length"),
-      cadence: val("cadence"),
-      package: val("package"),
       notes: val("notes"),
       name: val("contact-name"),
       email: val("email")
     };
 
-    if (!entry.showName || !entry.format || !entry.length || !entry.cadence || !entry.package || !entry.name || !entry.email) {
+    if (!entry.name || !entry.email || !entry.showName || !entry.service || !entry.format) {
       if (errorEl) errorEl.textContent = "Please complete every required field.";
       return;
     }
     if (!emailOk(entry.email)) {
-      if (errorEl) errorEl.textContent = "Enter a working email so we can reply.";
+      if (errorEl) errorEl.textContent = "Enter a working email for your own copy.";
       return;
     }
 
@@ -149,7 +140,7 @@
       form.classList.remove("is-hidden");
       if (success) success.classList.remove("is-visible");
       if (errorEl) errorEl.textContent = "";
-      var first = document.getElementById("show-name");
+      var first = document.getElementById("contact-name");
       if (first) first.focus();
     });
   }

@@ -3,148 +3,112 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Start an episode — CA Studio</title>
-  <meta name="description" content="Send a CA Studio intake for your next episode. We’ll reply within one business day. First episode is invoiced in USD before work starts.">
-  <meta name="theme-color" content="#14100d">
-  <meta property="og:title" content="Start an episode — CA Studio">
-  <meta property="og:description" content="Tell us the show, the format, and the package. Reply within one business day.">
+  <title>Start a brief — LighthePod</title>
+  <meta name="description" content="Leave a short brief for Clyde A. at LighthePod. Upwork is the primary hire path — this form stays on your machine.">
+  <meta name="theme-color" content="#0c0a12">
+  <meta property="og:title" content="Start a brief — LighthePod">
+  <meta property="og:description" content="A short intake for podcast, video, audio, shorts, or publishing. Hire on Upwork is still the main door.">
   <meta property="og:type" content="website">
+  <meta property="og:url" content="https://lightants.github.io/lighthepod/start.html">
   <meta property="og:image" content="og-image.svg">
-  <meta name="twitter:card" content="summary">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://lightants.github.io/lighthepod/start.html">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&family=Fraunces:opsz,wght,SOFT,WONK@9..144,500;9..144,600;36,500,50,0.7;144,500,60,0.85&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT,WONK@9..144,500;9..144,600;9..144,700;36,600,50,0.7;144,600,40,0.85&amp;family=Instrument+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
-  <header class="site-header">
+  <header class="mast">
     <div class="wrap">
-      <a class="brand" href="index.html">
-        <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true">
-          <circle cx="16" cy="16" r="11" fill="none" stroke="#c9a15b" stroke-width="1.6"/>
-          <circle cx="16" cy="16" r="4.2" fill="#e0b86a"/>
-        </svg>
-        <span class="brand-name"><strong>CA</strong><span>Studio</span></span>
+      <a class="wordmark" href="index.html">
+        <img src="assets/mark.svg" width="34" height="34" alt="">
+        Lighthe<em>Pod</em>
       </a>
+      <div class="mast-end">
       <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
         <svg viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M3 5h12M3 9h12M3 13h12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
       </button>
       <nav class="nav" id="site-nav" aria-label="Primary">
-        <a href="index.html#work">Work</a>
-        <a href="pricing.html">Pricing</a>
-        <a href="terms.html">Terms</a>
-        <a class="nav-cta" href="start.html" aria-current="page">Start an episode</a>
+                <a href="work.html">Work</a>
+        <a href="index.html#services">Services</a>
+        <a href="start.html" aria-current="page">Start a brief</a>
       </nav>
+      <a class="hire" href="https://www.upwork.com/freelancers/clydeantes" rel="noopener">Hire me on Upwork</a>
+      </div>
     </div>
   </header>
-
   <main id="main">
     <header class="page-hero">
       <div class="wrap-narrow">
-        <p class="eyebrow"><span class="lamp" aria-hidden="true"></span> Intake</p>
-        <h1>Tell us about the episode.</h1>
-        <p class="lede">This stays on your machine until we wire email. Submit and we’ll be in touch within one business day. The first episode is invoiced in USD before edit begins.</p>
+        <p class="eyebrow"><span class="glow" aria-hidden="true"></span> LighthePod</p>
+        <h1>Start a brief</h1>
+        <p class="lede">The reliable door is still <a href="https://www.upwork.com/freelancers/clydeantes" rel="noopener">Hire me on Upwork</a> at <strong>$20/hr</strong>. This form keeps a copy on your machine so you can paste it into a job invite.</p>
       </div>
     </header>
-
-    <section class="section" style="padding-top:0">
+    <section class="block" style="padding-top:0.4rem">
       <div class="wrap-narrow">
         <form class="form" id="intake-form" novalidate>
-          <label>
-            Show name
-            <input id="show-name" name="showName" type="text" autocomplete="organization" required placeholder="The show as it should appear">
-          </label>
           <div class="form-row">
-            <label>
-              Format
+            <label>Your name<input id="contact-name" name="name" type="text" autocomplete="name" required></label>
+            <label>Email<input id="email" name="email" type="email" autocomplete="email" required placeholder="For your own copy"></label>
+          </div>
+          <label>Show or project<input id="show-name" name="showName" type="text" autocomplete="organization" required placeholder="As it should appear"></label>
+          <div class="form-row">
+            <label>Service
+              <select id="service" name="service" required>
+                <option value="">Select</option>
+                <option value="podcast-editing">Podcast Editing</option>
+                <option value="video-editing">Video Editing</option>
+                <option value="audio-enhancement">Audio Enhancement</option>
+                <option value="shorts-clips">Shorts/Clips</option>
+                <option value="publishing">Publishing</option>
+              </select>
+            </label>
+            <label>Format
               <select id="format" name="format" required>
                 <option value="">Select</option>
                 <option value="audio">Audio</option>
                 <option value="video">Video</option>
-              </select>
-            </label>
-            <label>
-              Length
-              <select id="length" name="length" required>
-                <option value="">Select</option>
-                <option value="under-30">Under 30 min finished</option>
-                <option value="up-to-60">Up to 60 min finished (~90 min raw)</option>
-                <option value="over-90-raw">Longer than ~90 min raw</option>
+                <option value="both">Audio and video</option>
               </select>
             </label>
           </div>
-          <div class="form-row">
-            <label>
-              Cadence
-              <select id="cadence" name="cadence" required>
-                <option value="">Select</option>
-                <option value="one-off">One episode</option>
-                <option value="weekly">Weekly</option>
-                <option value="biweekly">Every two weeks</option>
-                <option value="monthly">Monthly</option>
-              </select>
-            </label>
-            <label>
-              Package
-              <select id="package" name="package" required>
-                <option value="">Select</option>
-                <option value="cut">Cut — $149 / episode</option>
-                <option value="show">Show — $249 / episode</option>
-                <option value="stage">Stage — $399 / episode</option>
-                <option value="cut-retainer">Cut retainer — $529 / month</option>
-                <option value="show-retainer">Show retainer — $899 / month</option>
-                <option value="stage-retainer">Stage retainer — $1,449 / month</option>
-              </select>
-            </label>
-          </div>
-          <label>
-            Link or notes
-            <textarea id="notes" name="notes" placeholder="Riverside or Zoom link, file location, guest names, intro/outro, anything we should hear first."></textarea>
-          </label>
-          <div class="form-row">
-            <label>
-              Your name
-              <input id="contact-name" name="name" type="text" autocomplete="name" required>
-            </label>
-            <label>
-              Email
-              <input id="email" name="email" type="email" autocomplete="email" required placeholder="We’ll reply here">
-            </label>
-          </div>
-          <p class="form-hint">No account is created. The request is stored in this browser so it can be wired to email later.</p>
+          <label>Link or notes<textarea id="notes" name="notes" placeholder="Drive or Riverside link, length, guests, deadline. Optional."></textarea></label>
+          <p class="form-hint">Nothing is emailed from this page. The brief is stored in this browser under lighthePod.intakeRequests. Prefer Upwork if you want Clyde A. on the calendar.</p>
           <p class="error" id="intake-error" role="alert"></p>
-          <button class="btn btn-gold" type="submit">Send request</button>
+          <button class="btn btn-hire" type="submit">Save brief</button>
         </form>
-
         <div class="success" id="intake-success" tabindex="-1" role="status">
-          <p class="kicker">Received</p>
-          <h2>We’ll reply within one business day.</h2>
-          <p>Your request is saved in this browser. Copy the summary if you want it in your own notes. The first episode is paid before work starts.</p>
+          <p class="kicker">Saved locally</p>
+          <h2>Take it to Upwork.</h2>
+          <p>Your brief is in this browser. Copy the summary into an Upwork invite — that is still the hire path, at $20/hr.</p>
           <pre class="summary" id="intake-summary"></pre>
           <div class="actions">
-            <button class="btn btn-gold" type="button" id="copy-summary">Copy summary</button>
-            <button class="btn btn-ghost" type="button" id="send-another">Send another</button>
+            <a class="btn btn-hire" href="https://www.upwork.com/freelancers/clydeantes" rel="noopener">Hire me on Upwork</a>
+            <button class="btn btn-ghost" type="button" id="copy-summary">Copy summary</button>
+            <button class="btn btn-ghost" type="button" id="send-another">Write another</button>
           </div>
         </div>
       </div>
     </section>
   </main>
-
-  <footer class="site-footer">
+  <footer class="colophon">
     <div class="wrap foot-grid">
       <div class="foot-brand">
-        <strong>CA Studio</strong>
-        Record today. Ready by morning.
-        <p>Remote podcast post-production. You record. We deliver publish-ready files.</p>
+        <strong>LighthePod</strong>
+        Podcast Producer &amp; Digital Media Engineer
+        <p>Clyde A. · overnight-capable post for podcasts, interviews, and short-form.</p>
       </div>
       <nav class="foot-links" aria-label="Footer">
         <a href="index.html">Home</a>
-        <a href="pricing.html">Pricing</a>
-        <a href="start.html">Start</a>
-        <a href="terms.html">Terms</a>
-        <span>© <span data-year>2026</span> CA Studio</span>
+        <a href="work.html">Work</a>
+        <a href="start.html">Start a brief</a>
+        <a href="https://www.upwork.com/freelancers/clydeantes" rel="noopener">Upwork</a>
+        <a href="https://vimeo.com/castudios" rel="noopener">Vimeo reel</a>
+        <span>© <span data-year>2026</span> LighthePod</span>
       </nav>
     </div>
   </footer>

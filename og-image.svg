@@ -1,12 +1,12 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-label="CA Studio">
-  <rect width="1200" height="630" fill="#14100d"/>
-  <circle cx="180" cy="120" r="220" fill="#c9a15b" fill-opacity="0.08"/>
-  <circle cx="1040" cy="520" r="260" fill="#5c4520" fill-opacity="0.35"/>
-  <circle cx="160" cy="200" r="36" fill="none" stroke="#c9a15b" stroke-width="4"/>
-  <circle cx="160" cy="200" r="14" fill="#e0b86a"/>
-  <text x="220" y="190" font-family="Georgia, serif" font-size="42" fill="#f3eadc">CA Studio</text>
-  <text x="220" y="228" font-family="Georgia, serif" font-size="22" fill="#c9a15b" letter-spacing="6">RECORD TODAY. READY BY MORNING.</text>
-  <text x="80" y="400" font-family="Georgia, serif" font-size="64" fill="#f3eadc">Publish-ready episodes</text>
-  <text x="80" y="470" font-family="Georgia, serif" font-size="64" fill="#f3eadc">while you sleep.</text>
-  <text x="80" y="560" font-family="Georgia, serif" font-size="28" fill="#d7c7b0">Cut $149  ·  Show $249  ·  Stage $399</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-label="LighthePod — Podcast Producer and Digital Media Engineer">
+  <rect width="1200" height="630" fill="#0c0a12"/>
+  <circle cx="1080" cy="-40" r="340" fill="#ff5a3c" fill-opacity="0.28"/>
+  <circle cx="80" cy="680" r="300" fill="#d94a8a" fill-opacity="0.22"/>
+  <ellipse cx="1040" cy="180" rx="70" ry="94" fill="none" stroke="#ff5a3c" stroke-width="4"/>
+  <ellipse cx="1040" cy="180" rx="38" ry="52" fill="#ff5a3c"/>
+  <text x="72" y="150" font-family="Georgia, 'Times New Roman', serif" font-size="42" fill="#ff8a6a">LighthePod</text>
+  <text x="72" y="290" font-family="Georgia, 'Times New Roman', serif" font-size="58" fill="#f6eee6">Podcast Producer &amp;</text>
+  <text x="72" y="362" font-family="Georgia, 'Times New Roman', serif" font-size="58" fill="#f6eee6">Digital Media Engineer</text>
+  <text x="72" y="460" font-family="Georgia, 'Times New Roman', serif" font-size="26" fill="#c9c0b6">Clyde A.  ·  overnight-capable post  ·  $20/hr on Upwork</text>
+  <text x="72" y="560" font-family="ui-sans-serif, system-ui, sans-serif" font-size="22" fill="#f6eee6">100% Job Success   ·   $100K+   ·   313 jobs   ·   6,253 hours</text>
 </svg>
