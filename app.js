@@ -1,7 +1,8 @@
 (function () {
   "use strict";
 
-  var STORAGE_KEY = "relayStudio.intakeRequests";
+  var STORAGE_KEY = "caStudio.intakeRequests";
+  var LEGACY_STORAGE_KEY = "relayStudio.intakeRequests";
 
   var toggle = document.querySelector("[data-nav-toggle]");
   var nav = document.getElementById("site-nav");
@@ -42,6 +43,13 @@
   function loadAll() {
     try {
       var raw = localStorage.getItem(STORAGE_KEY);
+      if (!raw) {
+        raw = localStorage.getItem(LEGACY_STORAGE_KEY);
+        if (raw) {
+          localStorage.setItem(STORAGE_KEY, raw);
+          localStorage.removeItem(LEGACY_STORAGE_KEY);
+        }
+      }
       var parsed = raw ? JSON.parse(raw) : [];
       return Array.isArray(parsed) ? parsed : [];
     } catch (e) {
@@ -67,7 +75,7 @@
 
   function formatSummary(entry) {
     return [
-      "Relay Studio — episode request",
+      "CA Studio — episode request",
       "Reference: " + entry.id,
       "When: " + entry.createdAt,
       "",
@@ -89,7 +97,7 @@
     if (errorEl) errorEl.textContent = "";
 
     var entry = {
-      id: "RS-" + Date.now().toString(36).toUpperCase(),
+      id: "CA-" + Date.now().toString(36).toUpperCase(),
       createdAt: new Date().toISOString(),
       showName: val("show-name"),
       format: val("format"),

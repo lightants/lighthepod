@@ -1,10 +1,10 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-label="Relay Studio">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-label="CA Studio">
   <rect width="1200" height="630" fill="#14100d"/>
   <circle cx="180" cy="120" r="220" fill="#c9a15b" fill-opacity="0.08"/>
   <circle cx="1040" cy="520" r="260" fill="#5c4520" fill-opacity="0.35"/>
   <circle cx="160" cy="200" r="36" fill="none" stroke="#c9a15b" stroke-width="4"/>
   <circle cx="160" cy="200" r="14" fill="#e0b86a"/>
-  <text x="220" y="190" font-family="Georgia, serif" font-size="42" fill="#f3eadc">Relay Studio</text>
+  <text x="220" y="190" font-family="Georgia, serif" font-size="42" fill="#f3eadc">CA Studio</text>
   <text x="220" y="228" font-family="Georgia, serif" font-size="22" fill="#c9a15b" letter-spacing="6">RECORD TODAY. READY BY MORNING.</text>
   <text x="80" y="400" font-family="Georgia, serif" font-size="64" fill="#f3eadc">Publish-ready episodes</text>
   <text x="80" y="470" font-family="Georgia, serif" font-size="64" fill="#f3eadc">while you sleep.</text>

@@ -1,8 +1,8 @@
-# Relay Studio
+# CA Studio
 
-Static marketing site for Relay Studio, a US-facing podcast post-production studio.
+Static marketing site for CA Studio, a US-facing podcast post-production studio.
 
-**Intended host:** GitHub Pages. Upload this folder as the Pages source (root of a repo, or `/docs`). Relative links, no build step. After you attach a custom domain, add it in the Pages settings; this repo does not invent a live URL.
+**Intended host:** GitHub Pages. Currently published at https://lightants.github.io/relay-studio/ until a ca-studio repo exists. Relative links, no build step. After you attach a custom domain, add it in the Pages settings; this repo does not invent a live URL.
 
 ## Local preview
 
@@ -13,15 +13,9 @@ python3 -m http.server 8080
 
 Open `http://localhost:8080`.
 
-## Rename the brand
+## Brand
 
-Search the folder for these strings and replace them together:
-
-| What | Where |
-| --- | --- |
-| `Relay Studio` / `Relay` | Every `.html` file, `README.md`, `og-image.svg`, JSON-LD on `index.html` |
-| Tagline `Record today. Ready by morning.` | `index.html`, footers, `README.md` |
-| Wordmark | Header `.brand-name` on each page; `favicon.svg` is the on-air ring |
+Public name: **CA Studio** (singular Studio). Header wordmark is `CA` + `Studio`. Tagline: Record today. Ready by morning.
 
 Do not add a phone, Instagram, or inbox until a real one exists. The start form does not send email.
 
@@ -43,7 +37,7 @@ The one market sentence on `pricing.html` is allowed. Do not add competitor name
 
 ## Intake form
 
-`start.html` + `app.js`. Client-side only. Submissions are stored in `localStorage` under `relayStudio.intakeRequests`. Success copy: reply within one business day.
+`start.html` + `app.js`. Client-side only. Submissions are stored in `localStorage` under `caStudio.intakeRequests` (legacy `relayStudio.intakeRequests` is migrated on read). Success copy: reply within one business day.
 
 To wire email later: read that key, POST the JSON to a form backend, and keep the in-page success state. Do not put a placeholder inbox on the site.
 
