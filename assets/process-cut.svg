@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" role="img" aria-label="Cut timeline with gaps, process demo not a client file">
+  <defs>
+    <linearGradient id="process-cut-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1c1628"/>
+      <stop offset="1" stop-color="#0b0910"/>
+    </linearGradient>
+    <radialGradient id="process-cut-l1" cx="88%" cy="8%" r="55%">
+      <stop offset="0" stop-color="#ff5a3c" stop-opacity="0.55"/>
+      <stop offset="1" stop-color="#ff5a3c" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="process-cut-l2" cx="8%" cy="92%" r="50%">
+      <stop offset="0" stop-color="#d94a8a" stop-opacity="0.38"/>
+      <stop offset="1" stop-color="#d94a8a" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="process-cut-grain">
+      <feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="2" stitchTiles="stitch"/>
+      <feColorMatrix type="saturate" values="0"/>
+      <feComponentTransfer><feFuncA type="table" tableValues="0 0.1"/></feComponentTransfer>
+    </filter>
+  </defs>
+  <rect width="640" height="400" fill="url(#process-cut-bg)"/>
+  <rect width="640" height="400" fill="url(#process-cut-l1)"/>
+  <rect width="640" height="400" fill="url(#process-cut-l2)"/>
+  
+  <text x="32" y="48" fill="#ff8a6a" font-size="14" font-family="ui-sans-serif, system-ui, sans-serif" letter-spacing="3">CUT · PROCESS DEMO</text>
+  <g fill="none" stroke="#f6eee6" stroke-opacity="0.18">
+    <path d="M40 110 H600 M40 170 H600 M40 230 H600 M40 290 H600"/>
+  </g>
+  <rect x="48" y="122" width="90" height="36" rx="4" fill="#f6eee6" opacity="0.18"/>
+  <rect x="150" y="122" width="40" height="36" rx="4" fill="#ff5a3c" opacity="0.55"/>
+  <rect x="210" y="122" width="70" height="36" rx="4" fill="#f6eee6" opacity="0.18"/>
+  <rect x="300" y="122" width="28" height="36" rx="4" fill="#d94a8a" opacity="0.5"/>
+  <rect x="360" y="122" width="110" height="36" rx="4" fill="#f6eee6" opacity="0.18"/>
+  <rect x="490" y="122" width="54" height="36" rx="4" fill="#ff5a3c" opacity="0.4"/>
+  <rect x="70" y="182" width="160" height="36" rx="4" fill="#c9c0b6" opacity="0.2"/>
+  <rect x="250" y="182" width="20" height="36" rx="4" fill="#0c0a12"/>
+  <rect x="286" y="182" width="120" height="36" rx="4" fill="#c9c0b6" opacity="0.2"/>
+  <rect x="430" y="182" width="80" height="36" rx="4" fill="#c9c0b6" opacity="0.12"/>
+  <rect x="90" y="242" width="200" height="36" rx="4" fill="#d94a8a" opacity="0.28"/>
+  <rect x="310" y="242" width="16" height="36" rx="4" fill="#0c0a12"/>
+  <rect x="344" y="242" width="150" height="36" rx="4" fill="#d94a8a" opacity="0.2"/>
+  <path d="M150 110 v180 M300 110 v180 M430 110 v180" stroke="#ff5a3c" stroke-width="1" opacity="0.55" stroke-dasharray="4 6"/>
+
+  <rect width="640" height="400" filter="url(#process-cut-grain)"/>
+  <rect x="14" y="14" width="612" height="372" fill="none" stroke="#f6eee6" stroke-opacity="0.12" stroke-width="1"/>
+</svg>

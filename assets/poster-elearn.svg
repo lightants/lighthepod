@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" role="img" aria-label="Abstract course timeline bars">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1c1628"/>
+      <stop offset="1" stop-color="#0b0910"/>
+    </linearGradient>
+    <radialGradient id="leak1" cx="88%" cy="8%" r="55%">
+      <stop offset="0" stop-color="#ff5a3c" stop-opacity="0.55"/>
+      <stop offset="1" stop-color="#ff5a3c" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="leak2" cx="8%" cy="92%" r="50%">
+      <stop offset="0" stop-color="#d94a8a" stop-opacity="0.38"/>
+      <stop offset="1" stop-color="#d94a8a" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="grain">
+      <feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="2" stitchTiles="stitch"/>
+      <feColorMatrix type="saturate" values="0"/>
+      <feComponentTransfer><feFuncA type="table" tableValues="0 0.09"/></feComponentTransfer>
+    </filter>
+  </defs>
+  <rect width="640" height="400" fill="url(#bg)"/>
+  <rect width="640" height="400" fill="url(#leak1)"/>
+  <rect width="640" height="400" fill="url(#leak2)"/>
+  
+  <g stroke="#f6eee6" stroke-width="10" stroke-linecap="round" opacity="0.85">
+    <path d="M90 110 h280"/><path d="M90 150 h420" opacity="0.5"/>
+    <path d="M90 190 h200"/><path d="M90 230 h360" opacity="0.5"/>
+    <path d="M90 270 h250"/><path d="M90 310 h180" opacity="0.45"/>
+  </g>
+  <g stroke="#ff5a3c" stroke-width="10" stroke-linecap="round">
+    <path d="M90 110 h160"/><path d="M90 190 h90"/><path d="M90 270 h120"/>
+  </g>
+  <circle cx="250" cy="110" r="7" fill="#ff5a3c"/>
+  <circle cx="180" cy="190" r="7" fill="#ff5a3c"/>
+  <circle cx="210" cy="270" r="7" fill="#ff5a3c"/>
+
+  <rect width="640" height="400" filter="url(#grain)"/>
+  <rect x="14" y="14" width="612" height="372" fill="none" stroke="#f6eee6" stroke-opacity="0.12" stroke-width="1"/>
+</svg>
