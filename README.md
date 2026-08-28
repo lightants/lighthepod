@@ -2,12 +2,12 @@
 
 Static marketing site for CA Studio, a US-facing podcast post-production studio.
 
-**Intended host:** GitHub Pages. Currently published at https://lightants.github.io/relay-studio/ until a ca-studio repo exists. Relative links, no build step. After you attach a custom domain, add it in the Pages settings; this repo does not invent a live URL.
+**Intended host:** GitHub Pages. Currently published at https://lightants.github.io/ca-studio/. Relative links, no build step. After you attach a custom domain, add it in the Pages settings; this repo does not invent a live URL.
 
 ## Local preview
 
 ```bash
-cd relay-studio
+cd ca-studio
 python3 -m http.server 8080
 ```
 
@@ -37,7 +37,7 @@ The one market sentence on `pricing.html` is allowed. Do not add competitor name
 
 ## Intake form
 
-`start.html` + `app.js`. Client-side only. Submissions are stored in `localStorage` under `caStudio.intakeRequests` (legacy `relayStudio.intakeRequests` is migrated on read). Success copy: reply within one business day.
+`start.html` + `app.js`. Client-side only. Submissions are stored in `localStorage` under `caStudio.intakeRequests`. Success copy: reply within one business day.
 
 To wire email later: read that key, POST the JSON to a form backend, and keep the in-page success state. Do not put a placeholder inbox on the site.
 
